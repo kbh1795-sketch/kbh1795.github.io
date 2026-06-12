@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kim Byunghee | Personal Homepage</title>
-  <meta name="description" content="Personal homepage of Kim Byunghee, an Army officer focused on logistics, robotics, automation, and AI-assisted defense systems." />
+  <meta name="description" content="Personal homepage of Kim Byunghee." />
   <style>
     :root {
       --bg: #f7f6f2;
@@ -17,18 +17,12 @@
       --accent-soft: #e7f0ea;
       --warm: #b9852b;
       --warm-soft: #f4ead9;
-      --danger: #b6493e;
-      --danger-soft: #f6e7e3;
       --radius: 8px;
       --shadow: 0 16px 40px rgba(32, 48, 40, 0.08);
     }
 
     * {
       box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -45,7 +39,7 @@
     }
 
     .container {
-      max-width: 1120px;
+      max-width: 1040px;
       margin: 0 auto;
       padding: 32px 24px 56px;
     }
@@ -78,10 +72,10 @@
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
       gap: 44px;
       align-items: center;
-      margin-bottom: 84px;
+      margin-bottom: 76px;
     }
 
     .eyebrow {
@@ -106,30 +100,21 @@
     h3 {
       margin: 0;
       line-height: 1.1;
+      letter-spacing: 0;
     }
 
     h1 {
-      max-width: 780px;
       font-size: clamp(44px, 7vw, 76px);
       font-weight: 820;
-      letter-spacing: 0;
     }
 
     .subtitle {
       margin: 22px 0 0;
-      max-width: 720px;
+      max-width: 680px;
       color: #2f3d36;
       font-size: clamp(21px, 3vw, 30px);
       font-weight: 700;
       line-height: 1.32;
-    }
-
-    .summary {
-      max-width: 720px;
-      margin: 24px 0 0;
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.85;
     }
 
     .actions {
@@ -150,7 +135,11 @@
       border-radius: var(--radius);
       font-size: 14px;
       font-weight: 760;
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
     }
 
     .btn-primary {
@@ -159,23 +148,22 @@
       color: #ffffff;
     }
 
-    .btn-primary:hover,
-    .btn-secondary:hover {
-      transform: translateY(-1px);
-    }
-
     .btn-secondary {
       background: var(--surface);
       color: var(--ink);
       box-shadow: var(--shadow);
     }
 
-    .profile-panel {
+    .profile-panel,
+    .card {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 22px;
       box-shadow: var(--shadow);
+    }
+
+    .profile-panel {
+      padding: 22px;
     }
 
     .avatar {
@@ -216,7 +204,6 @@
     h2 {
       font-size: 26px;
       font-weight: 790;
-      letter-spacing: 0;
     }
 
     .section-kicker {
@@ -225,27 +212,13 @@
       font-size: 14px;
     }
 
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 26px;
-      box-shadow: var(--shadow);
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.85;
-    }
-
-    .card p + p {
-      margin-top: 16px;
-    }
-
     .stack {
       display: grid;
       gap: 16px;
+    }
+
+    .card {
+      padding: 26px;
     }
 
     .experience-card {
@@ -275,23 +248,16 @@
       color: var(--accent);
     }
 
-    .role-icon.robotics {
+    .role-icon.education {
       background: var(--warm-soft);
       border-color: #e5d1aa;
       color: var(--warm);
-    }
-
-    .role-icon.research {
-      background: var(--danger-soft);
-      border-color: #eac7c1;
-      color: var(--danger);
     }
 
     .item-top {
       display: flex;
       justify-content: space-between;
       gap: 16px;
-      margin-bottom: 12px;
     }
 
     h3 {
@@ -310,115 +276,24 @@
       white-space: nowrap;
     }
 
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .project-card {
-      min-height: 230px;
-    }
-
-    .project-icon {
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 18px;
-      border-radius: var(--radius);
-      background: var(--accent-soft);
-      color: var(--accent);
-    }
-
-    .project-icon svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .skill {
-      padding: 9px 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--surface);
-      color: #4d554f;
-      font-size: 14px;
-      font-weight: 620;
-      box-shadow: var(--shadow);
-    }
-
-    .contact-section {
-      display: block;
-      margin-bottom: 0;
-    }
-
-    .contact-band {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 28px;
-      align-items: center;
-      background: var(--ink);
-      color: #ffffff;
-      border-radius: var(--radius);
-      padding: 34px;
-      box-shadow: var(--shadow);
-    }
-
-    .contact-band p {
-      max-width: 690px;
-      margin: 12px 0 0;
-      color: #d7dfda;
-    }
-
-    .contact-band .btn {
-      background: #ffffff;
-      border-color: #ffffff;
-      color: var(--ink);
-    }
-
     .footer {
-      margin-top: 26px;
       color: var(--muted);
       font-size: 13px;
       text-align: center;
     }
 
     @media (max-width: 860px) {
-      .container {
-        padding-top: 24px;
-      }
-
-      .nav {
-        margin-bottom: 48px;
-      }
-
       .nav-links {
         display: none;
       }
 
       .hero,
-      section,
-      .contact-band {
+      section {
         grid-template-columns: 1fr;
-      }
-
-      .hero {
-        gap: 28px;
-        margin-bottom: 68px;
       }
 
       .profile-panel {
         max-width: 360px;
-      }
-
-      .project-grid {
-        grid-template-columns: 1fr;
       }
 
       .item-top {
@@ -445,11 +320,6 @@
         width: 50px;
         height: 50px;
       }
-
-      .card,
-      .contact-band {
-        padding: 22px;
-      }
     }
   </style>
 </head>
@@ -459,10 +329,7 @@
     <nav class="nav" aria-label="Primary">
       <a href="#" class="brand">Kim Byunghee</a>
       <div class="nav-links">
-        <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -476,24 +343,18 @@
           Republic of Korea
         </div>
         <h1>Kim Byunghee</h1>
-        <p class="subtitle">Army Officer focused on logistics, robotics, automation, and AI-assisted systems.</p>
-        <p class="summary">
-          I work at the intersection of military logistics, engineering, and emerging technology.
-          My interests include robotics, automated maintenance systems, data-informed operations,
-          and practical AI tools that improve decision support.
-        </p>
         <div class="actions">
-          <a href="#experience" class="btn btn-primary">
-            <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M4 4h16v2H4V4Zm0 7h16v2H4v-2Zm0 7h10v2H4v-2Z" />
-            </svg>
-            Experience
-          </a>
-          <a href="https://www.linkedin.com/in/byunghee-kim-247260330/" target="_blank" rel="noreferrer" class="btn btn-secondary">
+          <a href="https://www.linkedin.com/in/byunghee-kim-247260330/" target="_blank" rel="noreferrer" class="btn btn-primary">
             <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.32 8h4.35v14H.32V8Zm7.04 0h4.17v1.91h.06c.58-1.1 2-2.26 4.12-2.26C20.12 7.65 21 10.55 21 14.32V22h-4.35v-6.81c0-1.62-.03-3.71-2.26-3.71-2.27 0-2.62 1.77-2.62 3.59V22H7.36V8Z" />
             </svg>
             LinkedIn
+          </a>
+          <a href="#experience" class="btn btn-secondary">
+            <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M4 4h16v2H4V4Zm0 7h16v2H4v-2Zm0 7h10v2H4v-2Z" />
+            </svg>
+            Experience
           </a>
         </div>
       </div>
@@ -517,28 +378,9 @@
       </aside>
     </header>
 
-    <section id="about">
-      <div>
-        <h2>About</h2>
-        <p class="section-kicker">Operations, engineering, and applied AI.</p>
-      </div>
-      <div class="card">
-        <p>
-          I am building a path that connects defense logistics experience with robotics and
-          automation research. I am especially interested in systems that make maintenance,
-          supply control, and field operations more reliable and measurable.
-        </p>
-        <p>
-          This site highlights current work themes, selected project directions, and professional
-          links for collaboration and networking.
-        </p>
-      </div>
-    </section>
-
     <section id="experience">
       <div>
         <h2>Experience</h2>
-        <p class="section-kicker">Clean visual markers for each role.</p>
       </div>
       <div class="stack">
         <article class="card experience-card">
@@ -547,123 +389,30 @@
               <path fill="currentColor" d="M12 2 4.5 5.2v5.7c0 4.8 3.2 9.3 7.5 11.1 4.3-1.8 7.5-6.3 7.5-11.1V5.2L12 2Zm0 3.2 4.9 2.1v3.6c0 3.2-1.9 6.3-4.9 7.9-3-1.6-4.9-4.7-4.9-7.9V7.3L12 5.2Zm0 2.1-1.2 2.4-2.7.4 1.9 1.9-.4 2.7 2.4-1.3 2.4 1.3-.4-2.7 1.9-1.9-2.7-.4L12 7.3Z" />
             </svg>
           </div>
-          <div>
-            <div class="item-top">
-              <div>
-                <h3>Logistics / Supply Control Officer</h3>
-                <div class="org">Republic of Korea Army</div>
-              </div>
-              <div class="period">Present</div>
+          <div class="item-top">
+            <div>
+              <h3>Logistics / Supply Control Officer</h3>
+              <div class="org">Republic of Korea Army</div>
             </div>
-            <p>
-              Responsible for logistics operations, material supply control, and process
-              improvement in military support environments.
-            </p>
-          </div>
-        </article>
-
-        <article class="card experience-card">
-          <div class="role-icon robotics" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor" d="M10.8 2h2.4v2.2a7.9 7.9 0 0 1 2.2.9L17 3.5l1.7 1.7-1.6 1.6c.4.7.7 1.4.9 2.2h2.2v2.4H18a7.9 7.9 0 0 1-.9 2.2l1.6 1.6L17 16.9l-1.6-1.6c-.7.4-1.4.7-2.2.9v2.2h-2.4v-2.2a7.9 7.9 0 0 1-2.2-.9L7 16.9l-1.7-1.7 1.6-1.6a7.9 7.9 0 0 1-.9-2.2H3.8V9H6c.2-.8.5-1.5.9-2.2L5.3 5.2 7 3.5l1.6 1.6c.7-.4 1.4-.7 2.2-.9V2Zm1.2 6a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4Zm-8 12h16v2H4v-2Z" />
-            </svg>
-          </div>
-          <div>
-            <div class="item-top">
-              <div>
-                <h3>Graduate Study Candidate</h3>
-                <div class="org">Mechanical / Robotics Engineering</div>
-              </div>
-              <div class="period">Upcoming</div>
-            </div>
-            <p>
-              Preparing for overseas graduate study with research interests in robotics,
-              automation, and defense maintenance systems.
-            </p>
+            <div class="period">Present</div>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="projects">
+    <section id="contact">
       <div>
-        <h2>Projects</h2>
-        <p class="section-kicker">Selected directions and research themes.</p>
+        <h2>Contact</h2>
       </div>
-      <div class="project-grid">
-        <article class="card project-card">
-          <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor" d="M4 5h16v4H4V5Zm2 2v0h12v0H6Zm-2 5h7v7H4v-7Zm9 0h7v7h-7v-7Zm-7 2v3h3v-3H6Zm9 0v3h3v-3h-3Z" />
+      <div class="stack">
+        <article class="card">
+          <a class="meta-link" href="https://www.linkedin.com/in/byunghee-kim-247260330/" target="_blank" rel="noreferrer">
+            <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.32 8h4.35v14H.32V8Zm7.04 0h4.17v1.91h.06c.58-1.1 2-2.26 4.12-2.26C20.12 7.65 21 10.55 21 14.32V22h-4.35v-6.81c0-1.62-.03-3.71-2.26-3.71-2.27 0-2.62 1.77-2.62 3.59V22H7.36V8Z" />
             </svg>
-          </div>
-          <h3>Automated Maintenance Systems</h3>
-          <p>
-            Research concept on improving maintenance efficiency through robotics,
-            automation, and overseas case analysis.
-          </p>
+            LinkedIn profile
+          </a>
         </article>
-
-        <article class="card project-card">
-          <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor" d="M12 2 4 6v6c0 4.4 3.1 8.5 8 10 4.9-1.5 8-5.6 8-10V6l-8-4Zm0 3.1 5 2.5V12c0 3-1.9 5.8-5 7-3.1-1.2-5-4-5-7V7.6l5-2.5Zm-1 4.4h2V12h2.5v2H13v2.5h-2V14H8.5v-2H11V9.5Z" />
-            </svg>
-          </div>
-          <h3>AI-Assisted Evaluation Model</h3>
-          <p>
-            A rule-based and LLM-assisted model designed to improve consistency and
-            explainability in written response assessment.
-          </p>
-        </article>
-
-        <article class="card project-card">
-          <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor" d="M5 3h14v18H5V3Zm2 2v14h10V5H7Zm2 2h6v2H9V7Zm0 4h6v2H9v-2Zm0 4h4v2H9v-2Z" />
-            </svg>
-          </div>
-          <h3>Lifelog Prediction Study</h3>
-          <p>
-            Feature engineering and predictive modeling project using multimodal lifelog data.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div>
-        <h2>Skills</h2>
-        <p class="section-kicker">Practical areas of focus.</p>
-      </div>
-      <div class="skills">
-        <span class="skill">Logistics Operations</span>
-        <span class="skill">Supply Control</span>
-        <span class="skill">Project Management</span>
-        <span class="skill">Robotics</span>
-        <span class="skill">Automation</span>
-        <span class="skill">AI Research</span>
-        <span class="skill">Data Analysis</span>
-        <span class="skill">Defense Technology</span>
-        <span class="skill">Technical Writing</span>
-      </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <div class="contact-band">
-        <div>
-          <h2>Contact</h2>
-          <p>
-            Connect through LinkedIn or GitHub for research collaboration, professional networking,
-            or project discussions.
-          </p>
-        </div>
-        <a href="https://www.linkedin.com/in/byunghee-kim-247260330/" target="_blank" rel="noreferrer" class="btn">
-          <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.32 8h4.35v14H.32V8Zm7.04 0h4.17v1.91h.06c.58-1.1 2-2.26 4.12-2.26C20.12 7.65 21 10.55 21 14.32V22h-4.35v-6.81c0-1.62-.03-3.71-2.26-3.71-2.27 0-2.62 1.77-2.62 3.59V22H7.36V8Z" />
-          </svg>
-          Open LinkedIn
-        </a>
       </div>
     </section>
 
