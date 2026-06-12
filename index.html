@@ -4,18 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kim Byunghee | Personal Homepage</title>
-  <meta name="description" content="Personal homepage of Kim Byunghee. Army officer, logistics, robotics, automation, and AI research." />
+  <meta name="description" content="Personal homepage of Kim Byunghee, an Army officer focused on logistics, robotics, automation, and AI-assisted defense systems." />
   <style>
     :root {
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --line: #e2e8f0;
-      --dark: #111827;
-      --dark-soft: #1f2937;
-      --radius: 24px;
-      --shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      --bg: #f7f6f2;
+      --surface: #ffffff;
+      --text: #171717;
+      --muted: #656565;
+      --line: #dedad0;
+      --ink: #203028;
+      --accent: #2f6f5e;
+      --accent-soft: #e7f0ea;
+      --warm: #b9852b;
+      --warm-soft: #f4ead9;
+      --danger: #b6493e;
+      --danger-soft: #f6e7e3;
+      --radius: 8px;
+      --shadow: 0 16px 40px rgba(32, 48, 40, 0.08);
     }
 
     * {
@@ -40,77 +45,88 @@
     }
 
     .container {
-      max-width: 1080px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 40px 24px 64px;
+      padding: 32px 24px 56px;
     }
 
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      margin-bottom: 72px;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 64px;
     }
 
     .brand {
       font-size: 18px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
+      font-weight: 760;
     }
 
     .nav-links {
       display: flex;
-      gap: 28px;
+      align-items: center;
+      gap: 24px;
       color: var(--muted);
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 620;
     }
 
     .nav-links a:hover {
-      color: var(--text);
+      color: var(--accent);
     }
 
     .hero {
       display: grid;
-      grid-template-columns: 1.4fr 0.6fr;
-      gap: 48px;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: 44px;
       align-items: center;
-      margin-bottom: 96px;
+      margin-bottom: 84px;
     }
 
-    .badge {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--card);
-      color: var(--muted);
+      gap: 10px;
+      margin-bottom: 18px;
+      color: var(--accent);
       font-size: 14px;
-      box-shadow: var(--shadow);
-      margin-bottom: 20px;
+      font-weight: 760;
+    }
+
+    .eyebrow svg,
+    .link-icon {
+      width: 18px;
+      height: 18px;
+      flex: none;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.1;
     }
 
     h1 {
-      margin: 0;
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 1;
-      letter-spacing: -0.06em;
+      max-width: 780px;
+      font-size: clamp(44px, 7vw, 76px);
+      font-weight: 820;
+      letter-spacing: 0;
     }
 
     .subtitle {
-      margin: 20px 0 0;
-      font-size: clamp(20px, 3vw, 28px);
-      line-height: 1.35;
-      color: #334155;
-      font-weight: 650;
-      letter-spacing: -0.03em;
+      margin: 22px 0 0;
+      max-width: 720px;
+      color: #2f3d36;
+      font-size: clamp(21px, 3vw, 30px);
+      font-weight: 700;
+      line-height: 1.32;
     }
 
     .summary {
       max-width: 720px;
-      margin: 28px 0 0;
+      margin: 24px 0 0;
       color: var(--muted);
       font-size: 17px;
       line-height: 1.85;
@@ -120,96 +136,100 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 36px;
+      margin-top: 34px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 9px;
       min-height: 48px;
-      padding: 0 20px;
-      border-radius: 14px;
-      font-size: 14px;
-      font-weight: 700;
+      padding: 0 18px;
       border: 1px solid var(--line);
-      transition: 0.2s ease;
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 760;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
     }
 
     .btn-primary {
-      background: var(--dark);
-      color: white;
-      border-color: var(--dark);
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #ffffff;
     }
 
-    .btn-primary:hover {
-      background: var(--dark-soft);
+    .btn-primary:hover,
+    .btn-secondary:hover {
       transform: translateY(-1px);
     }
 
     .btn-secondary {
-      background: white;
-      color: var(--text);
+      background: var(--surface);
+      color: var(--ink);
       box-shadow: var(--shadow);
     }
 
-    .btn-secondary:hover {
-      background: #f1f5f9;
-      transform: translateY(-1px);
-    }
-
-    .profile-card {
-      background: var(--card);
+    .profile-panel {
+      background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 24px;
+      padding: 22px;
       box-shadow: var(--shadow);
     }
 
     .avatar {
-      height: 160px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #e2e8f0, #f8fafc);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 52px;
-      font-weight: 800;
-      color: #cbd5e1;
-      letter-spacing: -0.06em;
-      margin-bottom: 22px;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius);
+      object-fit: cover;
+      background: var(--accent-soft);
+      display: block;
     }
 
-    .contact-list {
+    .profile-meta {
       display: grid;
       gap: 12px;
-      color: var(--muted);
-      font-size: 14px;
+      margin-top: 18px;
     }
 
-    .contact-list a:hover {
-      color: var(--text);
+    .meta-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 620;
+    }
+
+    .meta-link:hover {
+      color: var(--accent);
     }
 
     section {
       display: grid;
-      grid-template-columns: 0.38fr 1fr;
-      gap: 32px;
+      grid-template-columns: 0.34fr 1fr;
+      gap: 36px;
       margin-bottom: 72px;
     }
 
     h2 {
-      margin: 0;
       font-size: 26px;
-      line-height: 1.2;
-      letter-spacing: -0.04em;
+      font-weight: 790;
+      letter-spacing: 0;
+    }
+
+    .section-kicker {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .card {
-      background: var(--card);
+      background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 28px;
+      padding: 26px;
       box-shadow: var(--shadow);
     }
 
@@ -228,47 +248,92 @@
       gap: 16px;
     }
 
+    .experience-card {
+      display: grid;
+      grid-template-columns: 56px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .role-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius);
+      display: grid;
+      place-items: center;
+      border: 1px solid transparent;
+    }
+
+    .role-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .role-icon.army {
+      background: var(--accent-soft);
+      border-color: #c9ded2;
+      color: var(--accent);
+    }
+
+    .role-icon.robotics {
+      background: var(--warm-soft);
+      border-color: #e5d1aa;
+      color: var(--warm);
+    }
+
+    .role-icon.research {
+      background: var(--danger-soft);
+      border-color: #eac7c1;
+      color: var(--danger);
+    }
+
     .item-top {
       display: flex;
       justify-content: space-between;
       gap: 16px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     h3 {
-      margin: 0;
-      font-size: 18px;
-      letter-spacing: -0.02em;
+      font-size: 19px;
+      font-weight: 760;
     }
 
     .org,
     .period {
       color: var(--muted);
       font-size: 14px;
-      font-weight: 550;
+      font-weight: 630;
+    }
+
+    .period {
+      white-space: nowrap;
     }
 
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
     }
 
     .project-card {
-      min-height: 210px;
+      min-height: 230px;
     }
 
-    .icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 12px;
-      background: #f1f5f9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .project-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
       margin-bottom: 18px;
-      color: var(--muted);
-      font-weight: 800;
+      border-radius: var(--radius);
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .project-icon svg {
+      width: 22px;
+      height: 22px;
     }
 
     .skills {
@@ -279,11 +344,12 @@
 
     .skill {
       padding: 9px 14px;
-      border-radius: 999px;
-      background: white;
       border: 1px solid var(--line);
-      color: #475569;
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: #4d554f;
       font-size: 14px;
+      font-weight: 620;
       box-shadow: var(--shadow);
     }
 
@@ -292,55 +358,43 @@
       margin-bottom: 0;
     }
 
-    .contact-box {
-      background: var(--dark);
-      color: white;
-      border-radius: var(--radius);
-      padding: 36px;
+    .contact-band {
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 28px;
       align-items: center;
+      background: var(--ink);
+      color: #ffffff;
+      border-radius: var(--radius);
+      padding: 34px;
       box-shadow: var(--shadow);
     }
 
-    .contact-box p {
-      color: #cbd5e1;
-      max-width: 680px;
+    .contact-band p {
+      max-width: 690px;
       margin: 12px 0 0;
+      color: #d7dfda;
     }
 
-    .contact-box .btn {
-      background: white;
-      color: var(--dark);
-      border-color: white;
+    .contact-band .btn {
+      background: #ffffff;
+      border-color: #ffffff;
+      color: var(--ink);
     }
 
     .footer {
-      margin-top: 28px;
+      margin-top: 26px;
       color: var(--muted);
       font-size: 13px;
       text-align: center;
     }
 
-    .edit-note {
-      margin-top: 48px;
-      padding: 18px 20px;
-      border: 1px dashed #cbd5e1;
-      border-radius: 18px;
-      color: #64748b;
-      font-size: 14px;
-      background: rgba(255, 255, 255, 0.65);
-    }
-
-    @media (max-width: 820px) {
+    @media (max-width: 860px) {
       .container {
-        padding-top: 28px;
+        padding-top: 24px;
       }
 
       .nav {
-        align-items: flex-start;
-        gap: 18px;
         margin-bottom: 48px;
       }
 
@@ -350,13 +404,17 @@
 
       .hero,
       section,
-      .contact-box {
+      .contact-band {
         grid-template-columns: 1fr;
       }
 
       .hero {
-        gap: 24px;
-        margin-bottom: 72px;
+        gap: 28px;
+        margin-bottom: 68px;
+      }
+
+      .profile-panel {
+        max-width: 360px;
       }
 
       .project-grid {
@@ -367,13 +425,38 @@
         flex-direction: column;
         gap: 4px;
       }
+
+      .period {
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .experience-card {
+        grid-template-columns: 1fr;
+      }
+
+      .role-icon {
+        width: 50px;
+        height: 50px;
+      }
+
+      .card,
+      .contact-band {
+        padding: 22px;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <nav class="nav">
+    <nav class="nav" aria-label="Primary">
       <a href="#" class="brand">Kim Byunghee</a>
       <div class="nav-links">
         <a href="#about">About</a>
@@ -386,81 +469,134 @@
 
     <header class="hero">
       <div>
-        <div class="badge">📍 Republic of Korea</div>
+        <div class="eyebrow">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z" />
+          </svg>
+          Republic of Korea
+        </div>
         <h1>Kim Byunghee</h1>
-        <p class="subtitle">Army Officer | Logistics | Robotics & AI Research</p>
+        <p class="subtitle">Army Officer focused on logistics, robotics, automation, and AI-assisted systems.</p>
         <p class="summary">
-          I work at the intersection of military logistics, engineering, and emerging technologies.
-          My interests include robotics, automation, AI-assisted decision support, and maintenance system modernization.
+          I work at the intersection of military logistics, engineering, and emerging technology.
+          My interests include robotics, automated maintenance systems, data-informed operations,
+          and practical AI tools that improve decision support.
         </p>
         <div class="actions">
-          <a href="#projects" class="btn btn-primary">View Projects →</a>
-          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          <a href="#experience" class="btn btn-primary">
+            <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M4 4h16v2H4V4Zm0 7h16v2H4v-2Zm0 7h10v2H4v-2Z" />
+            </svg>
+            Experience
+          </a>
+          <a href="https://www.linkedin.com/in/byunghee-kim-247260330/" target="_blank" rel="noreferrer" class="btn btn-secondary">
+            <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.32 8h4.35v14H.32V8Zm7.04 0h4.17v1.91h.06c.58-1.1 2-2.26 4.12-2.26C20.12 7.65 21 10.55 21 14.32V22h-4.35v-6.81c0-1.62-.03-3.71-2.26-3.71-2.27 0-2.62 1.77-2.62 3.59V22H7.36V8Z" />
+            </svg>
+            LinkedIn
+          </a>
         </div>
       </div>
 
-      <aside class="profile-card">
-        <div class="avatar">KB</div>
-        <div class="contact-list">
-          <a href="mailto:your.email@example.com">✉ your.email@example.com</a>
-          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer">in LinkedIn</a>
-          <a href="https://github.com/your-username" target="_blank" rel="noreferrer">GitHub</a>
+      <aside class="profile-panel" aria-label="Profile links">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/235901753?v=4" alt="Kim Byunghee GitHub profile avatar" />
+        <div class="profile-meta">
+          <a class="meta-link" href="https://www.linkedin.com/in/byunghee-kim-247260330/" target="_blank" rel="noreferrer">
+            <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.32 8h4.35v14H.32V8Zm7.04 0h4.17v1.91h.06c.58-1.1 2-2.26 4.12-2.26C20.12 7.65 21 10.55 21 14.32V22h-4.35v-6.81c0-1.62-.03-3.71-2.26-3.71-2.27 0-2.62 1.77-2.62 3.59V22H7.36V8Z" />
+            </svg>
+            LinkedIn profile
+          </a>
+          <a class="meta-link" href="https://github.com/kbh1795-sketch" target="_blank" rel="noreferrer">
+            <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.82-.26.82-.58v-2.03c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.47 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z" />
+            </svg>
+            GitHub
+          </a>
         </div>
       </aside>
     </header>
 
     <section id="about">
-      <h2>About</h2>
+      <div>
+        <h2>About</h2>
+        <p class="section-kicker">Operations, engineering, and applied AI.</p>
+      </div>
       <div class="card">
         <p>
-          Write a short introduction here. Keep it simple: who you are, what you do,
-          and what kind of work or research you are interested in.
+          I am building a path that connects defense logistics experience with robotics and
+          automation research. I am especially interested in systems that make maintenance,
+          supply control, and field operations more reliable and measurable.
         </p>
         <p>
-          This page is intentionally minimal. You can add more details later, such as
-          publications, awards, certificates, a downloadable CV, or selected research outputs.
+          This site highlights current work themes, selected project directions, and professional
+          links for collaboration and networking.
         </p>
       </div>
     </section>
 
     <section id="experience">
-      <h2>Experience</h2>
+      <div>
+        <h2>Experience</h2>
+        <p class="section-kicker">Clean visual markers for each role.</p>
+      </div>
       <div class="stack">
-        <article class="card">
-          <div class="item-top">
-            <div>
-              <h3>Logistics / Supply Control Officer</h3>
-              <div class="org">Republic of Korea Army</div>
-            </div>
-            <div class="period">Present</div>
+        <article class="card experience-card">
+          <div class="role-icon army" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M12 2 4.5 5.2v5.7c0 4.8 3.2 9.3 7.5 11.1 4.3-1.8 7.5-6.3 7.5-11.1V5.2L12 2Zm0 3.2 4.9 2.1v3.6c0 3.2-1.9 6.3-4.9 7.9-3-1.6-4.9-4.7-4.9-7.9V7.3L12 5.2Zm0 2.1-1.2 2.4-2.7.4 1.9 1.9-.4 2.7 2.4-1.3 2.4 1.3-.4-2.7 1.9-1.9-2.7-.4L12 7.3Z" />
+            </svg>
           </div>
-          <p>
-            Responsible for logistics operations, material supply control, and process improvement
-            in military support environments.
-          </p>
+          <div>
+            <div class="item-top">
+              <div>
+                <h3>Logistics / Supply Control Officer</h3>
+                <div class="org">Republic of Korea Army</div>
+              </div>
+              <div class="period">Present</div>
+            </div>
+            <p>
+              Responsible for logistics operations, material supply control, and process
+              improvement in military support environments.
+            </p>
+          </div>
         </article>
 
-        <article class="card">
-          <div class="item-top">
-            <div>
-              <h3>Graduate Study Candidate</h3>
-              <div class="org">Mechanical / Robotics Engineering</div>
-            </div>
-            <div class="period">Upcoming</div>
+        <article class="card experience-card">
+          <div class="role-icon robotics" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M10.8 2h2.4v2.2a7.9 7.9 0 0 1 2.2.9L17 3.5l1.7 1.7-1.6 1.6c.4.7.7 1.4.9 2.2h2.2v2.4H18a7.9 7.9 0 0 1-.9 2.2l1.6 1.6L17 16.9l-1.6-1.6c-.7.4-1.4.7-2.2.9v2.2h-2.4v-2.2a7.9 7.9 0 0 1-2.2-.9L7 16.9l-1.7-1.7 1.6-1.6a7.9 7.9 0 0 1-.9-2.2H3.8V9H6c.2-.8.5-1.5.9-2.2L5.3 5.2 7 3.5l1.6 1.6c.7-.4 1.4-.7 2.2-.9V2Zm1.2 6a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4Zm-8 12h16v2H4v-2Z" />
+            </svg>
           </div>
-          <p>
-            Preparing for overseas graduate study with research interests in robotics,
-            automation, and defense maintenance systems.
-          </p>
+          <div>
+            <div class="item-top">
+              <div>
+                <h3>Graduate Study Candidate</h3>
+                <div class="org">Mechanical / Robotics Engineering</div>
+              </div>
+              <div class="period">Upcoming</div>
+            </div>
+            <p>
+              Preparing for overseas graduate study with research interests in robotics,
+              automation, and defense maintenance systems.
+            </p>
+          </div>
         </article>
       </div>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <div>
+        <h2>Projects</h2>
+        <p class="section-kicker">Selected directions and research themes.</p>
+      </div>
       <div class="project-grid">
         <article class="card project-card">
-          <div class="icon">01</div>
+          <div class="project-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M4 5h16v4H4V5Zm2 2v0h12v0H6Zm-2 5h7v7H4v-7Zm9 0h7v7h-7v-7Zm-7 2v3h3v-3H6Zm9 0v3h3v-3h-3Z" />
+            </svg>
+          </div>
           <h3>Automated Maintenance Systems</h3>
           <p>
             Research concept on improving maintenance efficiency through robotics,
@@ -469,7 +605,11 @@
         </article>
 
         <article class="card project-card">
-          <div class="icon">02</div>
+          <div class="project-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M12 2 4 6v6c0 4.4 3.1 8.5 8 10 4.9-1.5 8-5.6 8-10V6l-8-4Zm0 3.1 5 2.5V12c0 3-1.9 5.8-5 7-3.1-1.2-5-4-5-7V7.6l5-2.5Zm-1 4.4h2V12h2.5v2H13v2.5h-2V14H8.5v-2H11V9.5Z" />
+            </svg>
+          </div>
           <h3>AI-Assisted Evaluation Model</h3>
           <p>
             A rule-based and LLM-assisted model designed to improve consistency and
@@ -478,7 +618,11 @@
         </article>
 
         <article class="card project-card">
-          <div class="icon">03</div>
+          <div class="project-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M5 3h14v18H5V3Zm2 2v14h10V5H7Zm2 2h6v2H9V7Zm0 4h6v2H9v-2Zm0 4h4v2H9v-2Z" />
+            </svg>
+          </div>
           <h3>Lifelog Prediction Study</h3>
           <p>
             Feature engineering and predictive modeling project using multimodal lifelog data.
@@ -488,9 +632,13 @@
     </section>
 
     <section id="skills">
-      <h2>Skills</h2>
+      <div>
+        <h2>Skills</h2>
+        <p class="section-kicker">Practical areas of focus.</p>
+      </div>
       <div class="skills">
         <span class="skill">Logistics Operations</span>
+        <span class="skill">Supply Control</span>
         <span class="skill">Project Management</span>
         <span class="skill">Robotics</span>
         <span class="skill">Automation</span>
@@ -502,26 +650,25 @@
     </section>
 
     <section id="contact" class="contact-section">
-      <div class="contact-box">
+      <div class="contact-band">
         <div>
           <h2>Contact</h2>
           <p>
-            Feel free to reach out for research collaboration, professional networking,
+            Connect through LinkedIn or GitHub for research collaboration, professional networking,
             or project discussions.
           </p>
         </div>
-        <a href="mailto:your.email@example.com" class="btn">Send Email</a>
+        <a href="https://www.linkedin.com/in/byunghee-kim-247260330/" target="_blank" rel="noreferrer" class="btn">
+          <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.32 8h4.35v14H.32V8Zm7.04 0h4.17v1.91h.06c.58-1.1 2-2.26 4.12-2.26C20.12 7.65 21 10.55 21 14.32V22h-4.35v-6.81c0-1.62-.03-3.71-2.26-3.71-2.27 0-2.62 1.77-2.62 3.59V22H7.36V8Z" />
+          </svg>
+          Open LinkedIn
+        </a>
       </div>
     </section>
 
-    <div class="edit-note">
-      Editing guide: replace the name, title, email, LinkedIn URL, GitHub URL, experience,
-      projects, and skills directly in this file. You can edit it with Notepad, GitHub web editor,
-      or any basic text editor.
-    </div>
-
     <footer class="footer">
-      © 2026 Kim Byunghee. All rights reserved.
+      &copy; 2026 Kim Byunghee. All rights reserved.
     </footer>
   </div>
 </body>
